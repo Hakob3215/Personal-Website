@@ -23,7 +23,11 @@ body {
 .App {
   max-width: 1000px;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Typography */
@@ -61,15 +65,55 @@ header h1 {
   text-shadow: 2px 2px 4px #000;
 }
 
-header nav {
-  margin-top: 20px;
+.page-nav {
+  margin: 25px 0;
+  padding: 10px 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-header nav a {
-  margin: 0 20px;
-  font-size: 1.2em;
-  font-weight: bold;
+.page-nav a {
+  margin: 0 15px;
+  font-size: 1.1em;
+  font-family: 'Cinzel', serif;
   color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.page-nav a:hover {
+  color: var(--primary-color);
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links a {
+  font-size: 1em;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resume-btn {
+  border: 2px solid var(--primary-color);
+  padding: 8px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-btn:hover {
+  background: var(--primary-color);
+  color: #0f3b1e !important; /* Dark Green text for contrast */
+  box-shadow: 0 0 15px var(--primary-color);
 }
 
 /* Sections */
@@ -352,4 +396,53 @@ section {
   header h1 {
     font-size: 2.5em;
   }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  margin-top: auto; /* Push footer to bottom if content is short */
+  border-top: 2px solid var(--primary-color);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px 20px 0 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-links a {
+  font-size: 1.1em;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resume-btn-footer {
+  border: 1px solid var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.resume-btn-footer:hover {
+  background: var(--primary-color);
+  color: #0f3b1e !important;
+}
+
+.copyright {
+  color: #aaa;
+  font-size: 0.9em;
+  margin: 0;
 }

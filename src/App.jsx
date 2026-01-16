@@ -5,6 +5,7 @@ import Education from './components/Education';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Footer from './components/Footer';
 import AnimatedSection from './components/AnimatedSection';
 import './App.css';
 
@@ -16,19 +17,16 @@ function App() {
         <About />
         
         <div className="content-sections">
-          <AnimatedSection direction="deal-left">
-            <Education />
-          </AnimatedSection>
-          
-          <AnimatedSection direction="deal-right">
-            <Experience />
-          </AnimatedSection>
+          <Education />
           
           <Projects />
+
+          <Experience />
           
           <Skills />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

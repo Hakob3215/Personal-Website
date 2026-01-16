@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedSection from './AnimatedSection';
 
 const experiences = [
   {
@@ -16,22 +17,24 @@ const experiences = [
 function Experience() {
   return (
     <section id="experience">
-      <div className="playing-card">
-        <h2>Professional Experience</h2>
-        <div className="experience-list">
-            {experiences.map((exp, index) => (
-            <div key={index} className="experience-item">
-                <h3>{exp.role} - {exp.company}</h3>
-                <p className="experience-period">{exp.period} | {exp.location}</p>
-                <ul>
-                {exp.description.map((item, i) => (
-                    <li key={i}>{item}</li>
-                ))}
-                </ul>
-            </div>
-            ))}
+      <AnimatedSection direction="deal-right">
+        <div className="playing-card">
+          <h2>Professional Experience</h2>
+          <div className="experience-list">
+              {experiences.map((exp, index) => (
+              <div key={index} className="experience-item">
+                  <h3>{exp.role} - {exp.company}</h3>
+                  <p className="experience-period">{exp.period} | {exp.location}</p>
+                  <ul>
+                  {exp.description.map((item, i) => (
+                      <li key={i}>{item}</li>
+                  ))}
+                  </ul>
+              </div>
+              ))}
+          </div>
         </div>
-      </div>
+      </AnimatedSection>
     </section>
   );
 }
