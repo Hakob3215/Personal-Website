@@ -16,14 +16,16 @@ const education = {
 function Education() {
     return (
         <section id="education">
-            <h2>Education</h2>
-            <h3>{education.school}</h3>
-            <p><strong>{education.degree}</strong> | {education.expected}</p>
-            <p><strong>GPA:</strong> {education.gpa} | <strong>Honors:</strong> {education.honors}</p>
-            <h4>Relevant Courses</h4>
-            <ul className="course-list">
-                {education.courses.map(course => <li key={course}>{course}</li>)}
-            </ul>
+            <div className="playing-card">
+                <h2>Education</h2>
+                <h3>{education.school}</h3>
+                <p><strong>{education.degree}</strong> | {education.expected}</p>
+                <p><strong>GPA:</strong> {education.gpa} | <strong>Honors:</strong> {education.honors}</p>
+                <h4>Relevant Courses</h4>
+                <ul className="course-list">
+                    {education.courses.map(course => <li key={course}>{course}</li>)}
+                </ul>
+            </div>
         </section>
     );
 }

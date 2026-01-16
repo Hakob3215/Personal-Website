@@ -13,21 +13,21 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <AnimatedSection direction="left">
-          <About />
-        </AnimatedSection>
-        <AnimatedSection direction="right">
-          <Education />
-        </AnimatedSection>
-        <AnimatedSection direction="left">
-          <Experience />
-        </AnimatedSection>
-        <AnimatedSection direction="right">
+        <About />
+        
+        <div className="content-sections">
+          <AnimatedSection direction="deal-left">
+            <Education />
+          </AnimatedSection>
+          
+          <AnimatedSection direction="deal-right">
+            <Experience />
+          </AnimatedSection>
+          
           <Projects />
-        </AnimatedSection>
-        <AnimatedSection direction="left">
+          
           <Skills />
-        </AnimatedSection>
+        </div>
       </main>
     </div>
   );
